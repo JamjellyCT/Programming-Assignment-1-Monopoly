@@ -19,26 +19,35 @@ public:
     int rent;
 
     MonopolySpace() {
-        // TODO: define default constructor (recommended)
-        propertyName = "";
-        propertyColor = "";
-        value = 0;
-        rent = 0;
+        propertyName = "Default";
+        propertyColor = "White";
+        value = 110;
+        rent = 100;
     }
 
     MonopolySpace(string propertyName, string propertyColor, int value, int rent) {
-        /* TODO: Define overloaded constructor here */
+        this->propertyName = propertyName;
+        this->propertyColor = propertyColor;
+        this->value = value;
+        this->rent = rent;
+
     }
 
     bool isEqual(MonopolySpace other) {
         /* TODO: Define isEqual here (compare by name is fine if you enforce uniqueness) */
-        return false;
+        if (this->propertyName == other.propertyName) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     void print() {
         /* TODO: Define print here */
         // Example style:
         // cout << propertyName << " | " << propertyColor << " | $" << value << " | Rent " << rent;
+        cout << propertyName << " | " << propertyColor << " | $" << value << " | Rent $" << rent;
     }
 };
 
@@ -100,12 +109,30 @@ public:
     bool addSpace(T value) {
         // TODO:
         // - If nodeCount == MAX_SPACES return false (do not corrupt list)
+        if (nodeCount == MAX_SPACES) {
+            return false;
+        }
+
         // - Create new node
+        Node<T> *newNode = new Node<T>(value);
+
         // - If empty list: head=tail=player=new, new->next=head
+        if (nodeCount == 0) {
+            headNode = newNode;
+            tailNode = newNode;
+            playerNode = newNode;
+            newNode->nextNode = headNode;
+        }
         // - Else: tail->next=new, tail=new, tail->next=head
+        else {
+            tailNode->nextNode = newNode;
+            tailNode = newNode;
+            tailNode->nextNode = headNode;
+        }
         // - nodeCount++
+        nodeCount++;
         cout << "addSpace unwritten" << endl;
-        return false;
+        return true;
     }
 
     // -------------------------------
@@ -113,12 +140,20 @@ public:
     // -------------------------------
     int addMany(vector<T> values) {
         // TODO:
+        int countSpaces = 0;
         // - Add sequentially until full
+        // - Stop exactly when you reach MAX_SPACES
+        for (T value : values) {
+            if (addSpace(value)) {
+                addSpace(value);
+                countSpaces++;
+            }
+        }
         // - Stop exactly when you reach MAX_SPACES
         // - Return number successfully added
         // - Do not corrupt pointers if capacity is exceeded
         cout << "addMany unwritten" << endl;
-        return 0;
+        return countSpaces;
     }
 
     // -------------------------------

@@ -29,13 +29,22 @@ Each entry may be one of the following:
 ---
 
 ### Entry 1
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
+**Date:** 2026-02-27 
+**Entry Type:** Bug Fix 
 **Task worked on:**  
+addSpace function.
 **Issue or decision:**  
+When writing code, the code was greyed out like it was commented out, but wasn’t a comment.
 **Error message / symptom (if applicable):**  
 **What I tried:**  
+When typing something random in the function, for example, I put e somewhere, it would get its color back.
+I wasn't sure why though.
 **Fix / resolution (or final decision):**  
+if (nodeCount = MAX_SPACES) {
+return false;
+}
+This was my code, and I missed the fact that I used = and not == for the condition. After putting the second equal sign
+the color returned.
 **Commit(s):**  
 
 ---
