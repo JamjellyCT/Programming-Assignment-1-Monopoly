@@ -50,13 +50,23 @@ the color returned.
 ---
 
 ### Entry 2
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
+**Date:** 2026-03-03
+**Entry Type:** Testing Entry 
 **Task worked on:**  
+AddMany function.
 **Issue or decision:**  
-**Error message / symptom (if applicable):**  
+The if statement uses addSpace(value) as a condition and then has addSpace(value) 
+if it returns true inside the if statement. 
+This adds a space twice, which was not the intended use for using addSpace as the condition, 
+as I wanted it to check if it could addSpace before adding a space.
+**Error message / symptom (if applicable):**
 **What I tried:**  
+I tried removing the addSpace from the if statement cause it already adds a space,
+and it returns false if the list is full from the addSpace function.
 **Fix / resolution (or final decision):**  
+Removing the addSpace within the if statement worked. 
+I also added a break so it gets out of the loop if the list is already full,
+so it doesn’t add spaces anymore.
 **Commit(s):**  
 
 ---

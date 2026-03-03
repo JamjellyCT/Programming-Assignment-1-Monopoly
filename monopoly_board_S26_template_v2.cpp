@@ -145,8 +145,10 @@ public:
         // - Stop exactly when you reach MAX_SPACES
         for (T value : values) {
             if (addSpace(value)) {
-                addSpace(value);
                 countSpaces++;
+            }
+            else {
+                break; //Stops adding, List is full
             }
         }
         // - Stop exactly when you reach MAX_SPACES
@@ -166,6 +168,19 @@ public:
         // - Detect and track passing GO:
         //   increment passGoCount when a move crosses from tail back to head
         // - Must handle empty list safely
+        if (nodeCount == 0) {
+            return;
+        }
+        if (steps < 0) {
+            return;
+        }
+        for (int i = 0; i < steps; i++) {
+            playerNode = playerNode->nextNode;
+            if (playerNode->data.propertyName == "GO") {
+                passGoCount++;
+            }
+        }
+
         cout << "movePlayer unwritten" << endl;
     }
 
@@ -182,6 +197,19 @@ public:
         // - Must not infinite loop
         // - Must handle empty list
         // - Output must be deterministic and readable
+        if (nodeCount == 0) {
+            return;
+        }
+        if (count < 0) {
+            return;
+        }
+        Node<T> *temp = playerNode;
+        for (int i = 0; i < count; i++) {
+            temp = temp->nextNode;
+            temp->data.print();
+        }
+
+
         cout << "printFromPlayer unwritten" << endl;
     }
 
