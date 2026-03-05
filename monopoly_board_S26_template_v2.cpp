@@ -259,6 +259,26 @@ public:
         // - Preserve circular structure
         // - Correctly handle empty list and single-node list
         // - Player cursor must remain on the same logical space after reversal
+        if (nodeCount == 0 || nodeCount == 1) {
+            return;
+        }
+
+        Node<T> *prev = nullptr;
+        Node<T> *curr = headNode;
+        Node<T> *next = nullptr;
+
+        do {
+            next = curr->nextNode;
+            curr->nextNode = prev;
+            prev = curr;
+            curr = next;
+        } while (curr != headNode);
+
+        //Fix final connection
+        tailNode = headNode;
+        headNode = prev;
+        tailNode->nextNode = headNode;
+
         cout << "mirrorBoard unwritten" << endl;
     }
 
