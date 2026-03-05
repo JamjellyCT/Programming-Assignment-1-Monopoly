@@ -72,13 +72,20 @@ so it doesn’t add spaces anymore.
 ---
 
 ### Entry 3
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
+**Date:** 2026-03-04  
+**Entry Type:** Engineering Decision  
 **Task worked on:**  
+countSpaces function.
 **Issue or decision:**  
+Used do while loop instead of just while loop.
 **Error message / symptom (if applicable):**  
-**What I tried:**  
+**What I tried:** 
+Intended to use while loop to iterate through the list all the way up to tail and
+then when the loop stops I increment it one more time so it counts tail.
 **Fix / resolution (or final decision):**  
+I used a do while so I could increment and count the space it's currently on and changed 
+the condition for the loop to stop at head so it can count tail without 
+having to increment spaces outside the loop.
 **Commit(s):**  
 
 ---

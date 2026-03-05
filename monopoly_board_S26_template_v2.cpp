@@ -269,8 +269,20 @@ public:
         // TODO:
         // - Must be O(n), traverse exactly once with correct stop condition
         // - Do NOT rely on nodeCount for this method
+        int spaces = 0;
+        if (headNode == nullptr) {
+            return spaces;
+        }
+        Node<T> *temp = headNode;
+        do {
+            spaces++;
+            temp =  temp->nextNode;
+        }while (temp != headNode);
+
+
+
         cout << "countSpaces unwritten" << endl;
-        return 0;
+        return spaces;
     }
 
     // -------------------------------
@@ -281,6 +293,17 @@ public:
         // - Safely delete all nodes
         // - Tip: if tailNode exists, break the cycle first: tailNode->nextNode = nullptr
         // - Then delete like a normal singly linked list
+        if (nodeCount == 0) {
+            return;
+        }
+        tailNode->nextNode = nullptr;
+        Node<T> *temp = headNode;
+        while (nodeCount != 0) {
+            headNode = headNode->nextNode;
+            delete temp;
+            temp = headNode;
+            nodeCount--;
+        }
         cout << "clear unwritten" << endl;
     }
 };
