@@ -91,13 +91,17 @@ having to increment spaces outside the loop.
 ---
 
 ### Entry 4
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
+**Date:** 2026-03-06  
+**Entry Type:** Engineering Decision  
 **Task worked on:**  
+Board Construction
 **Issue or decision:**  
+Hardcoded adding spaces.
 **Error message / symptom (if applicable):**  
 **What I tried:**  
+Hardcoded spaces by adding them to a vector and using addMany function.
 **Fix / resolution (or final decision):**  
+Easier. Just takes a long time.
 **Commit(s):**  
 
 ---

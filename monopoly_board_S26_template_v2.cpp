@@ -356,6 +356,51 @@ int main() {
     // NOTE: This starter calls addSpace once to show the intended API,
     // but your final submission should build a meaningful board.
     board.addSpace(MonopolySpace("GO", "None", 0, 0));
+    vector<MonopolySpace> spaces;
+    //I'm having fun naming them. Don't be mean to me >:c
+    //Hardcoded spaces
+    spaces.push_back(MonopolySpace("Old Town Road", "Brown", 10, 2));
+    spaces.push_back(MonopolySpace("Rad Event", "None", 0, 0));
+    spaces.push_back(MonopolySpace("Old Road Town", "Brown", 20, 4));
+    spaces.push_back(MonopolySpace("Tax One", "None", 0, 200));
+    spaces.push_back(MonopolySpace("RailRoad One", "None", 200, 25));
+    spaces.push_back(MonopolySpace("Lit Blue Avenue", "Light Blue", 50, 10));
+    spaces.push_back(MonopolySpace("Oceanside Avenue", "Light Blue", 60, 12));
+    spaces.push_back(MonopolySpace(" Per Chance", "None", 0, 0));
+    spaces.push_back(MonopolySpace("Another Avenue", "Light Blue", 40, 8));
+    spaces.push_back(MonopolySpace("Cool Mall", "Pink", 100, 20));
+    spaces.push_back(MonopolySpace("Lame Mall", "Pink", 30, 6));
+    spaces.push_back(MonopolySpace("Cool Event", "None", 0, 0));
+    spaces.push_back(MonopolySpace("The Mall", "Pink", 40, 10));
+    spaces.push_back(MonopolySpace("Mall Mall", "Pink", 40, 8));
+    spaces.push_back(MonopolySpace("Chance Event", "None", 0, 0));
+    spaces.push_back(MonopolySpace("Tax Someone", "None", 0, 200));
+    spaces.push_back(MonopolySpace("Jail", "None", 0, 0));
+    spaces.push_back(MonopolySpace("Blood Town", "Red", 30, 6));
+    spaces.push_back(MonopolySpace("Paint the Town", "Red", 150, 30));
+    spaces.push_back(MonopolySpace("Cooler Event", "None", 0, 0));
+    spaces.push_back(MonopolySpace("Ketchup", "Red", 50, 12));
+    spaces.push_back(MonopolySpace("Blue Town", "Red", 70, 14));
+    spaces.push_back(MonopolySpace("Tax Event", "None", 0, 0));
+    spaces.push_back(MonopolySpace("Mono RailRoad", "None", 200, 25));
+    spaces.push_back(MonopolySpace("Golden Place", "Yellow", 250, 40));
+    spaces.push_back(MonopolySpace("Golden Gardens", "Yellow", 220, 30));
+    spaces.push_back(MonopolySpace("Luxury Tax", "None", 0, 100));
+    spaces.push_back(MonopolySpace("Gonna be, gonna be Golden", "Yellow", 0, 100));
+    spaces.push_back(MonopolySpace("Golden Chance", "None", 0, 0));
+    spaces.push_back(MonopolySpace("Orang", "Orange", 10, 2));
+    spaces.push_back(MonopolySpace("Odd Place", "Orange", 15, 3));
+    spaces.push_back(MonopolySpace("Free Money", "None", 0, 0));
+    spaces.push_back(MonopolySpace("Orchard Org", "Orange", 20, 4));
+    spaces.push_back(MonopolySpace("Go to Jail", "None", 0, 0));
+    spaces.push_back(MonopolySpace("Diamond Place", "Blue", 500, 150));
+    spaces.push_back(MonopolySpace("Seaside View", "Blue", 100, 20));
+    spaces.push_back(MonopolySpace("Another Chance", "None", 0, 0));
+    spaces.push_back(MonopolySpace("Skyline Tower", "Blue", 130, 026));
+    spaces.push_back(MonopolySpace("Extra Space", "None", 2000000, 250));
+
+    //Add spaces to board
+    board.addMany(spaces);
 
     // -------------------------------
     // Playable Traversal Loop
