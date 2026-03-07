@@ -47,7 +47,8 @@ public:
         /* TODO: Define print here */
         // Example style:
         // cout << propertyName << " | " << propertyColor << " | $" << value << " | Rent " << rent;
-        cout << propertyName << " | " << propertyColor << " | $" << value << " | Rent $" << rent;
+        cout << propertyName << " | " << propertyColor << " | $" << value << " | Rent $" << rent << endl;
+
     }
 };
 
@@ -148,6 +149,7 @@ public:
                 countSpaces++;
             }
             else {
+                cout << "addMany, List full" << endl;
                 break; //Stops adding, List is full
             }
         }
@@ -217,6 +219,17 @@ public:
     void printBoardOnce() {
         // TODO:
         // - Traverse exactly one full cycle and print each node
+        if (nodeCount == 0) {
+            return;
+        }
+
+        int count = nodeCount;
+        Node<T> *temp = headNode;
+        do {
+            temp->data.print();
+            temp = temp->nextNode;
+            count--;
+        } while (count != 0);
         cout << "printBoardOnce unwritten" << endl;
     }
 
@@ -397,7 +410,9 @@ int main() {
     spaces.push_back(MonopolySpace("Seaside View", "Blue", 100, 20));
     spaces.push_back(MonopolySpace("Another Chance", "None", 0, 0));
     spaces.push_back(MonopolySpace("Skyline Tower", "Blue", 130, 026));
+    spaces.push_back(MonopolySpace("Chance Chance", "None", 0, 0));
     spaces.push_back(MonopolySpace("Extra Space", "None", 2000000, 250));
+    spaces.push_back(MonopolySpace("Extra Space 2", "None", 2000000, 250));
 
     //Add spaces to board
     board.addMany(spaces);
@@ -418,6 +433,13 @@ int main() {
     }
 
     // -------------------------------
+    // Print Entire Board
+    // -------------------------------
+     // cout << endl;
+     // board.printBoardOnce();
+
+
+    // -------------------------------
     // Advanced Feature Demos (students choose path)
     // -------------------------------
     // Option A examples:
@@ -425,7 +447,26 @@ int main() {
     // vector<string> brownProps = board.findByColor("Brown");
     //
     // Option B example:
-    // board.mirrorBoard();
+    cout << endl;
+    board.mirrorBoard();
+    cout << endl;
+    board.printBoardOnce();
+
+
+    // -------------------------------
+    // Playable Traversal Loop 2 Electric Boogaloo
+    // -------------------------------
+    for (int turn = 1; turn <= 10; turn++) {
+        int roll = rollDice2to12();
+        cout << "\nTurn " << turn << " | Rolled: " << roll << endl;
+
+        board.movePlayer(roll);
+
+        cout << "Board view from player (next 5 spaces):" << endl;
+        board.printFromPlayer(5);
+
+        cout << "Times passed GO so far: " << board.getPassGoCount() << endl;
+    }
 
     return 0;
 }

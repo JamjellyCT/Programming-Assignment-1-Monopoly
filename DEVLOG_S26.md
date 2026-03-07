@@ -107,13 +107,18 @@ Easier. Just takes a long time.
 ---
 
 ### Entry 5
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
-**Task worked on:**  
+**Date:** 2026-03-07  
+**Entry Type:** Bug Fix 
+**Task worked on:**
+AddMany Function
 **Issue or decision:**  
+Wasn't sure if overflow edgecase was working as intended.
 **Error message / symptom (if applicable):**  
-**What I tried:**  
+I added a print message to say that the addMany attempted to add to a full list but stopped but the print message wasn't showing.
+**What I tried:**
+I tried adding more spaces but the message didn't show.
 **Fix / resolution (or final decision):**  
+The first test I had exactly 40 spaces so it wouldn't show cause there is no overflow. The real reason for the error was that I put the print message after the break statement.
 **Commit(s):**  
 
 ---
