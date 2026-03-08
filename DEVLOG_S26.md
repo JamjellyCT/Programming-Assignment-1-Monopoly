@@ -124,11 +124,18 @@ The first test I had exactly 40 spaces so it wouldn't show cause there is no ove
 ---
 
 ### Entry 6
-**Date:** YYYY-MM-DD  
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision  
+**Date:** 2026-03-08  
+**Entry Type:** Testing Entry
 **Task worked on:**  
+Board construction
 **Issue or decision:**  
+Testing to see if adding spaces to a reversed board worked as intended.
 **Error message / symptom (if applicable):**  
+The board kept readding spaces that were already within the list. For example, if I had spaces A -> B -> C, reversed the list
+to get C -> B -> A, then wanted to add D -> E -> F, the board would look like C -> B -> A -> A -> B -> C -> D -> E -> F.
 **What I tried:**  
+I tried finding the error to test if it was my function implementation. Printing the board state after reversing to see if it got added at that stage.
 **Fix / resolution (or final decision):**  
+It wasn't a problem with my functions but rather my testing. I was pushing the spaces into the first original vector containing the other spaces.
+This is why they got readded when I was adding in the new spaces. So I created a new vector for the new spaces and it worked as intended.
 **Commit(s):**  

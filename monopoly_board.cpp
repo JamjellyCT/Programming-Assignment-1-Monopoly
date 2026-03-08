@@ -379,43 +379,50 @@ int main() {
     spaces.push_back(MonopolySpace("RailRoad One", "None", 200, 25));
     spaces.push_back(MonopolySpace("Lit Blue Avenue", "Light Blue", 50, 10));
     spaces.push_back(MonopolySpace("Oceanside Avenue", "Light Blue", 60, 12));
-    spaces.push_back(MonopolySpace(" Per Chance", "None", 0, 0));
-    spaces.push_back(MonopolySpace("Another Avenue", "Light Blue", 40, 8));
-    spaces.push_back(MonopolySpace("Cool Mall", "Pink", 100, 20));
-    spaces.push_back(MonopolySpace("Lame Mall", "Pink", 30, 6));
-    spaces.push_back(MonopolySpace("Cool Event", "None", 0, 0));
-    spaces.push_back(MonopolySpace("The Mall", "Pink", 40, 10));
-    spaces.push_back(MonopolySpace("Mall Mall", "Pink", 40, 8));
-    spaces.push_back(MonopolySpace("Chance Event", "None", 0, 0));
-    spaces.push_back(MonopolySpace("Tax Someone", "None", 0, 200));
-    spaces.push_back(MonopolySpace("Jail", "None", 0, 0));
-    spaces.push_back(MonopolySpace("Blood Town", "Red", 30, 6));
-    spaces.push_back(MonopolySpace("Paint the Town", "Red", 150, 30));
-    spaces.push_back(MonopolySpace("Cooler Event", "None", 0, 0));
-    spaces.push_back(MonopolySpace("Ketchup", "Red", 50, 12));
-    spaces.push_back(MonopolySpace("Blue Town", "Red", 70, 14));
-    spaces.push_back(MonopolySpace("Tax Event", "None", 0, 0));
-    spaces.push_back(MonopolySpace("Mono RailRoad", "None", 200, 25));
-    spaces.push_back(MonopolySpace("Golden Place", "Yellow", 250, 40));
-    spaces.push_back(MonopolySpace("Golden Gardens", "Yellow", 220, 30));
-    spaces.push_back(MonopolySpace("Luxury Tax", "None", 0, 100));
-    spaces.push_back(MonopolySpace("Gonna be, gonna be Golden", "Yellow", 0, 100));
-    spaces.push_back(MonopolySpace("Golden Chance", "None", 0, 0));
-    spaces.push_back(MonopolySpace("Orang", "Orange", 10, 2));
-    spaces.push_back(MonopolySpace("Odd Place", "Orange", 15, 3));
-    spaces.push_back(MonopolySpace("Free Money", "None", 0, 0));
-    spaces.push_back(MonopolySpace("Orchard Org", "Orange", 20, 4));
-    spaces.push_back(MonopolySpace("Go to Jail", "None", 0, 0));
-    spaces.push_back(MonopolySpace("Diamond Place", "Blue", 500, 150));
-    spaces.push_back(MonopolySpace("Seaside View", "Blue", 100, 20));
-    spaces.push_back(MonopolySpace("Another Chance", "None", 0, 0));
-    spaces.push_back(MonopolySpace("Skyline Tower", "Blue", 130, 026));
-    spaces.push_back(MonopolySpace("Chance Chance", "None", 0, 0));
-    spaces.push_back(MonopolySpace("Extra Space", "None", 2000000, 250));
-    spaces.push_back(MonopolySpace("Extra Space 2", "None", 2000000, 250));
+    spaces.push_back(MonopolySpace("Per Chance", "None", 0, 0));
+    // spaces.push_back(MonopolySpace("Another Avenue", "Light Blue", 40, 8));
+    // spaces.push_back(MonopolySpace("Cool Mall", "Pink", 100, 20));
+    // spaces.push_back(MonopolySpace("Lame Mall", "Pink", 30, 6));
+    // spaces.push_back(MonopolySpace("Cool Event", "None", 0, 0));
+    // spaces.push_back(MonopolySpace("The Mall", "Pink", 40, 10));
+    // spaces.push_back(MonopolySpace("Mall Mall", "Pink", 40, 8));
+    // spaces.push_back(MonopolySpace("Chance Event", "None", 0, 0));
+    // spaces.push_back(MonopolySpace("Tax Someone", "None", 0, 200));
+    // spaces.push_back(MonopolySpace("Jail", "None", 0, 0));
+    // spaces.push_back(MonopolySpace("Blood Town", "Red", 30, 6));
+    // spaces.push_back(MonopolySpace("Paint the Town", "Red", 150, 30));
+    // spaces.push_back(MonopolySpace("Cooler Event", "None", 0, 0));
+    // spaces.push_back(MonopolySpace("Ketchup", "Red", 50, 12));
+    // spaces.push_back(MonopolySpace("Blue Town", "Red", 70, 14));
+    // spaces.push_back(MonopolySpace("Tax Event", "None", 0, 0));
+    // spaces.push_back(MonopolySpace("Mono RailRoad", "None", 200, 25));
+    // spaces.push_back(MonopolySpace("Golden Place", "Yellow", 250, 40));
+    // spaces.push_back(MonopolySpace("Golden Gardens", "Yellow", 220, 30));
+    // spaces.push_back(MonopolySpace("Luxury Tax", "None", 0, 100));
+    // spaces.push_back(MonopolySpace("Gonna be, gonna be Golden", "Yellow", 0, 100));
+    // spaces.push_back(MonopolySpace("Golden Chance", "None", 0, 0));
+    // spaces.push_back(MonopolySpace("Orang", "Orange", 10, 2));
+    // spaces.push_back(MonopolySpace("Odd Place", "Orange", 15, 3));
+    // spaces.push_back(MonopolySpace("Free Money", "None", 0, 0));
+    // spaces.push_back(MonopolySpace("Orchard Org", "Orange", 20, 4));
+    // spaces.push_back(MonopolySpace("Go to Jail", "None", 0, 0));
+    // spaces.push_back(MonopolySpace("Diamond Place", "Blue", 500, 150));
+    // spaces.push_back(MonopolySpace("Seaside View", "Blue", 100, 20));
+    // spaces.push_back(MonopolySpace("Another Chance", "None", 0, 0));
+    // spaces.push_back(MonopolySpace("Skyline Tower", "Blue", 130, 026));
+    // spaces.push_back(MonopolySpace("Chance Chance", "None", 0, 0));
+    // spaces.push_back(MonopolySpace("Extra Space", "None", 2000000, 250));
+    // spaces.push_back(MonopolySpace("Extra Space 2", "None", 2000000, 250));
 
     //Add spaces to board
     board.addMany(spaces);
+
+    // board.printBoardOnce();
+     cout << board.countSpaces() << endl;
+    //
+    // board.clear();
+    // cout << board.countSpaces() << endl;
+
 
     // -------------------------------
     // Playable Traversal Loop
@@ -432,6 +439,57 @@ int main() {
         cout << "Times passed GO so far: " << board.getPassGoCount() << endl;
     }
 
+    cout << endl;
+    board.mirrorBoard();
+
+    cout << endl;
+    board.printBoardOnce();
+
+    cout << endl;
+    cout << board.countSpaces() << endl;
+    cout << endl;
+    //Add spaces to reversed list
+    vector<MonopolySpace> spaces2;
+
+    spaces2.push_back(MonopolySpace("Another Avenue", "Light Blue", 40, 8));
+    spaces2.push_back(MonopolySpace("Cool Mall", "Pink", 100, 20));
+    spaces2.push_back(MonopolySpace("Lame Mall", "Pink", 30, 6));
+    spaces2.push_back(MonopolySpace("Cool Event", "None", 0, 0));
+    spaces2.push_back(MonopolySpace("The Mall", "Pink", 40, 10));
+    spaces2.push_back(MonopolySpace("Mall Mall", "Pink", 40, 8));
+    spaces2.push_back(MonopolySpace("Chance Event", "None", 0, 0));
+    spaces2.push_back(MonopolySpace("Tax Someone", "None", 0, 200));
+    spaces2.push_back(MonopolySpace("Jail", "None", 0, 0));
+    spaces2.push_back(MonopolySpace("Blood Town", "Red", 30, 6));
+    spaces2.push_back(MonopolySpace("Paint the Town", "Red", 150, 30));
+    spaces2.push_back(MonopolySpace("Cooler Event", "None", 0, 0));
+    spaces2.push_back(MonopolySpace("Ketchup", "Red", 50, 12));
+    spaces2.push_back(MonopolySpace("Blue Town", "Red", 70, 14));
+    spaces2.push_back(MonopolySpace("Tax Event", "None", 0, 0));
+    spaces2.push_back(MonopolySpace("Mono RailRoad", "None", 200, 25));
+    spaces2.push_back(MonopolySpace("Golden Place", "Yellow", 250, 40));
+    spaces2.push_back(MonopolySpace("Golden Gardens", "Yellow", 220, 30));
+    spaces2.push_back(MonopolySpace("Luxury Tax", "None", 0, 100));
+    spaces2.push_back(MonopolySpace("Gonna be, gonna be Golden", "Yellow", 0, 100));
+    spaces2.push_back(MonopolySpace("Golden Chance", "None", 0, 0));
+    spaces2.push_back(MonopolySpace("Orang", "Orange", 10, 2));
+    spaces2.push_back(MonopolySpace("Odd Place", "Orange", 15, 3));
+    spaces2.push_back(MonopolySpace("Free Money", "None", 0, 0));
+    spaces2.push_back(MonopolySpace("Orchard Org", "Orange", 20, 4));
+    spaces2.push_back(MonopolySpace("Go to Jail", "None", 0, 0));
+    spaces2.push_back(MonopolySpace("Diamond Place", "Blue", 500, 150));
+    spaces2.push_back(MonopolySpace("Seaside View", "Blue", 100, 20));
+    spaces2.push_back(MonopolySpace("Another Chance", "None", 0, 0));
+    spaces2.push_back(MonopolySpace("Skyline Tower", "Blue", 130, 026));
+    spaces2.push_back(MonopolySpace("Chance Chance", "None", 0, 0));
+    spaces2.push_back(MonopolySpace("Extra Space", "None", 2000000, 250));
+    spaces2.push_back(MonopolySpace("Extra Space 2", "None", 2000000, 250));
+
+    board.addMany(spaces2);
+
+    cout << endl;
+    board.printBoardOnce();
+
     // -------------------------------
     // Print Entire Board
     // -------------------------------
@@ -447,26 +505,26 @@ int main() {
     // vector<string> brownProps = board.findByColor("Brown");
     //
     // Option B example:
-    cout << endl;
-    board.mirrorBoard();
-    cout << endl;
-    board.printBoardOnce();
+    // cout << endl;
+    // board.mirrorBoard();
+    // cout << endl;
+    // board.printBoardOnce();
 
 
     // -------------------------------
     // Playable Traversal Loop 2 Electric Boogaloo
     // -------------------------------
-    for (int turn = 1; turn <= 10; turn++) {
-        int roll = rollDice2to12();
-        cout << "\nTurn " << turn << " | Rolled: " << roll << endl;
-
-        board.movePlayer(roll);
-
-        cout << "Board view from player (next 5 spaces):" << endl;
-        board.printFromPlayer(5);
-
-        cout << "Times passed GO so far: " << board.getPassGoCount() << endl;
-    }
+    // for (int turn = 1; turn <= 10; turn++) {
+    //     int roll = rollDice2to12();
+    //     cout << "\nTurn " << turn << " | Rolled: " << roll << endl;
+    //
+    //     board.movePlayer(roll);
+    //
+    //     cout << "Board view from player (next 5 spaces):" << endl;
+    //     board.printFromPlayer(5);
+    //
+    //     cout << "Times passed GO so far: " << board.getPassGoCount() << endl;
+    // }
 
     return 0;
 }
